@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Net Guardian – Passive Internet Speed & Net Neutrality Transparency</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body {
+      font: 16px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #0b0b10;
+      color: #f5f5f5;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+    header {
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 2rem 0 0.5rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+      margin: 1.2rem 0 0.3rem;
+    }
+    p {
+      margin: 0 0 0.7rem;
+    }
+    .muted {
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #9ca3af;
+      margin-right: 0.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      background: #111827;
+      border: 1px solid #1f2937;
+      color: #9ca3af;
+    }
+    .pill span {
+      font-size: 0.9rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #111827;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+    ul {
+      margin: 0 0 0.7rem 1.1rem;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.85rem;
+      background: #020617;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+      border: 1px solid #111827;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #111827;
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.6rem 0 0.4rem;
+    }
+    .callout {
+      padding: 0.75rem 0.9rem;
+      border-radius: 0.75rem;
+      background: #020617;
+      border: 1px solid #111827;
+      font-size: 0.9rem;
+      margin: 0.7rem 0 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="tag">Net Guardian</div>
+      <h1>Passive Internet Speed &amp; Net Neutrality Transparency</h1>
+      <p class="muted">
+        Net Guardian is a Chrome extension that measures the Internet speed you actually experience while browsing,
+        and compares it against other users on the same ISP, in the same country, and on the same CDN and resolution.
+      </p>
+      <div class="badge-row">
+        <div class="pill"><span>⚖️</span><span>Net neutrality transparency</span></div>
+        <div class="pill"><span>🛰</span><span>Passive, real-world traffic</span></div>
+        <div class="pill"><span>🔒</span><span>Privacy-first design</span></div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>What Net Guardian Does</h2>
+      <p>
+        Unlike synthetic speed tests that download test files, Net Guardian passively observes the websites and media
+        you are already using (for example, YouTube) to estimate your effective throughput in Mbit/s.
+      </p>
+      <ul>
+        <li><strong>Passive measurement</strong> – no extra test traffic, only real browsing activity.</li>
+        <li><strong>Percentile assessment</strong> – see how you compare to other users on your ISP and in your country.</li>
+        <li><strong>CDN awareness</strong> – understand performance when streaming via CDNs such as Google’s video CDN.</li>
+      </ul>
+      <div class="callout">
+        Net Guardian is built to support citizens, researchers, and regulators who care about
+        preserving an open, equal, and neutral Internet.
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <p>When you click the Net Guardian icon while browsing, the extension:</p>
+      <ul>
+        <li>Observes network activity in the active tab over a short period.</li>
+        <li>Estimates your average throughput based on bytes transferred and time.</li>
+        <li>Detects your ISP and country using a public IP lookup.</li>
+        <li>Identifies CDNs involved in the page (e.g., Google video hosts).</li>
+        <li>Optionally sends an anonymized measurement to the backend service.</li>
+      </ul>
+      <p>
+        The backend aggregates measurements from many users and computes percentiles, so your popup can show whether your
+        throughput is in the top or bottom portion of similar users.
+      </p>
+    </section>
+
+    <section id="privacy">
+      <h2>Data &amp; Privacy</h2>
+      <p class="muted">Last updated: <strong>October 2025</strong></p>
+
+      <h3>Information We Collect</h3>
+      <p>Net Guardian does <strong>not</strong> collect personal data or browsing history. When you click <em>Finish</em> in the popup, the extension sends anonymized measurement data to our server for aggregate statistics:</p>
+      <ul>
+        <li>Average throughput (speed in Mbit/s)</li>
+        <li>ISP name and country (from public IP lookup)</li>
+        <li>Video resolution observed during measurement</li>
+        <li>CDN hostnames (for example, <code>*.googlevideo.com</code>)</li>
+        <li>Basic system info (browser name/version, CPU cores)</li>
+      </ul>
+
+      <h3>How We Use Information</h3>
+      <ul>
+        <li>Compute throughput percentiles by ISP, country, and CDN + resolution.</li>
+        <li>Support research and transparency reporting about Internet performance.</li>
+      </ul>
+      <p>We do <strong>not</strong> sell data, use it for advertising, or profile individual users.</p>
+
+      <h3>Storage &amp; Retention</h3>
+      <p>
+        Measurements are stored in aggregated form in a database hosted by our backend provider.
+        No account identifiers, page contents, or detailed browsing histories are stored.
+      </p>
+
+      <h3>User Control</h3>
+      <p>
+        You can stop measurements at any time by removing the extension from your browser.
+        Once uninstalled, no further data is collected.
+      </p>
+
+      <h3>Contact</h3>
+      <p>
+        If you have questions about this policy or about Net Guardian, please contact us:<br>
+        Email: <a href="mailto:info@internetmozaik.org">info@internetmozaik.org</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>© Internet Mozaik. This project is focused on safeguarding an open, neutral Internet using passive, privacy-respecting measurements.</p>
+      <p>This page exists primarily to document how the Net Guardian extension works and how it handles data, for users and for the Chrome Web Store review process.</p>
+    </footer>
+  </main>
+</body>
+</html>
