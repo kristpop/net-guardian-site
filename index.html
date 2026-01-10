@@ -214,7 +214,7 @@
         <ul>
           <li>Observes network activity in the active tab over a short period.</li>
           <li>Estimates your average throughput based on bytes transferred and time.</li>
-          <li>Detects your ISP and country using a public IP lookup.</li>
+          <li>Detects your ISP and country using a public IP lookup - the IP address is never stored.</li>
           <li>Identifies CDNs involved in the page (e.g., Google video hosts).</li>
           <li>Optionally sends an anonymized measurement to the backend service.</li>
         </ul>
@@ -226,7 +226,7 @@
 
       <section id="privacy-en">
         <h2>Data &amp; Privacy</h2>
-        <p class="muted">Last updated: <strong>October 2025</strong></p>
+        <p class="muted">Last updated: <strong>January 2026</strong></p>
 
         <h3>Information We Collect</h3>
         <p>Net Guardian does <strong>not</strong> collect personal data or browsing history. When you click <em>Finish</em> in the popup, the extension sends anonymized measurement data to our server for aggregate statistics:</p>
@@ -234,9 +234,16 @@
           <li>Average throughput (speed in Mbit/s)</li>
           <li>ISP name and country (from public IP lookup)</li>
           <li>Video resolution observed during measurement</li>
-          <li>CDN hostnames (for example, <code>*.googlevideo.com</code>)</td>
+          <li>CDN providers detected (for example, "Google CDN" for *.googlevideo.com)</td>
           <li>Basic system info (browser name/version, CPU cores)</li>
         </ul>
+
+        <h3>Technical Implementation</h3>
+<p>
+  Net Guardian does NOT use the Chrome <code>webRequest</code> permission, meaning it cannot 
+  intercept, modify, or track your web traffic. All measurements are done using the browser's 
+  built-in Performance API, which only sees resources already loaded by the page you're viewing.
+</p>
 
         <h3>How We Use Information</h3>
         <ul>
@@ -291,7 +298,8 @@
         <ul>
           <li>Го набљудува мрежниот сообраќај во активното јазиче за краток период.</li>
           <li>Го одредува Вашиот просечен податочен проток врз основа на пренесените бајти и времетраењето.</li>
-          <li>Го утврдува Вашиот оператор и држава пребарувајќи ја јавната IP адреса.</li>
+          <li>Го утврдува Вашиот оператор и држава пребарувајќи ја јавната IP адреса - Вашата IP
+            адреса никогаш не се зачувува.</li>
           <li>Ги идентификува CDN-ите содржани на веб страната (на пр. видео-инфраструктурата на Гугл).</li>
           <li>По Ваш избор го испраќа анонимизираното мерење до позадинските сервиси.</li>
         </ul>
@@ -303,7 +311,7 @@
 
       <section id="privacy-mk">
         <h2>Податоци и приватност</h2>
-        <p class="muted">Последни промена: <strong>октомври 2025</strong></p>
+        <p class="muted">Последни промена: <strong>јануари 2026</strong></p>
 
         <h3>Кои информации се собираат</h3>
         <p>
@@ -315,9 +323,17 @@
           <li>Просечната податочна брзина (во Mbit/s)</li>
           <li>Името на операторот и државата (користејќи ја јавната IP адреса)</li>
           <li>Видео резолуцијата забележана за време на мерењето</li>
-          <li>CDN-ите (на пример <code>*.googlevideo.com</code>)</li>
+          <li>Идентификуваните CDN-и (на пример „Google CDN“ за <code>*.googlevideo.com</code>)</li>
           <li>Основните системски податоци (прелистувач и верзија, број на јадра на процесорот)</li>
         </ul>
+
+        <h3>Техничка имплементација</h3>
+<p>
+  Net Guardian НЕ користи Chrome <code>webRequest</code> дозвола, што значи дека не може да го 
+  пресретнува, менува или следи Вашиот веб сообраќај. Сите мерења се вршат користејќи го 
+  вградениот Performance API на прелистувачот, кој ги гледа само ресурсите кои се веќе вчитани од веб страната 
+  што ја посетувате.
+</p>
 
         <h3>За што се користат информациите</h3>
         <ul>
